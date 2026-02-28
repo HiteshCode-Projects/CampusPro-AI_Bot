@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: campusbot-pro-server
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false        # You fill this in Render dashboard
+      - key: GEMINI_API_KEY
+        sync: false        # You fill this in Render dashboard
+      - key: CLIENT_URL
+        sync: false        # Your Vercel URL goes here
